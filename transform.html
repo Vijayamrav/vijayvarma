@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .container{
+            border:1px solid black;
+            height:500px;
+            width:80%;
+            position:absolute;
+            left:100px;
+            top:20px;
+            background-color:black;
+        } 
+        .transform{
+            border:1px solid black;
+            width:250px;
+            height:20px;
+            margin:10px;
+            background-color: rgb(113, 205, 219);
+            
+        
+        }
+        .sub{
+            margin-top:100px;
+            margin-left:100px;
+        }
+        .transform10deg:active~img{
+            transform: rotate(10deg);
+            
+        }
+        .transform45deg:active~img{
+            transform: rotate(45deg);
+            
+        }
+        .transformx45deg:active~img{
+            transform: rotateX(45deg);
+            
+        }
+        .transformx100deg:active~img{
+            transform: rotateX(100deg);
+            
+        }
+        .transformy45deg:active~img{
+            transform: rotateY(45deg);
+            
+        }
+        .transformy80deg:active~img{
+            transform: rotateY(80deg);
+            
+        }
+        .transformy80deg:hover{
+            scale:1.3;
+            background-color: chartreuse;
+            
+        }
+        .transformy45deg:hover{
+            scale:1.3;
+            background-color: chartreuse;
+            
+        }
+        .transformskew1:active~img{
+            transform:skew(20deg,20deg);
+        }
+        .transformskew2:active~img{
+            transform:skew(30deg,30deg);
+        }
+        .transformskew1:hover{
+            scale:1.3;
+            background-color: chartreuse;
+        }
+        .transformskew2:hover{
+            scale:1.3;
+            background-color: chartreuse;
+        }
+        .transformtranslate:active~img{
+            animation: move 2s linear  infinite;
+        }
+        .transformtranslate:hover{
+            scale:1.3;
+            background-color: chartreuse;
+        }
+        .transformtranslate1:hover{
+            scale:1.3;
+            background-color: chartreuse;
+        }
+        .transformtranslate1:active~img{
+            animation: move1 2s linear  infinite;
+        }
+        img{
+            position:absolute;
+            left:500px;
+            top:90px;
+            
+        }
+        img:hover{
+            scale:1.5;
+        }
+        @keyframes move{
+            100% {translate:300px 1000px}
+        }
+        @keyframes move1{
+         100% {translate:-300px -1000px}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sub">
+        <div class=" transform transformnone">
+            <input type="radio" name="transform" value="none">transform:none
+           </div>
+         <div class="transform transform10deg"><input type="radio" name="transform" value="10deg">transform:rotate(10deg)</div>   
+         <div class="transform transform45deg"><input type="radio" name="transform" value="10deg">transform: rotate(45deg);</div>  
+         <div class="transform transformx45deg"><input type="radio" name="transform" value="10deg">transform: rotateX(45deg);</div>  
+         <div class="transform transformx100deg"><input type="radio" name="transform" value="10deg">transform: rotateX(100deg);</div>  
+         <div class="transform transformy45deg"><input type="radio" name="transform" value="10deg">transform: rotateY(45deg);</div>
+          <div class="transform transformy80deg"><input type="radio" name="transform" value="10deg">transform: rotateY(80deg);</div> 
+          <div class="transform transformskew1"><input type="radio" name="transform" value="10deg">transform: skew(20deg,20deg);</div>  
+          <div class="transform transformskew2"><input type="radio" name="transform" value="10deg">transform: skew(30deg,30deg);</div> 
+          <div class="transform transformtranslate"><input type="radio" name="transform" value="10deg">transform: translate(200px,500px);</div> 
+          <div class="transform transformtranslate1"><input type="radio" name="transform" value="10deg">transform:tarnslate(-200px,-500px)</div> 
+          <img src="./images/mountains.webp" height="300px" width="400px"> 
+        </div>
+           
+        
+        
+    </div>
+    
+</body>
+</html>
